@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="isFlex centerElement flexCol gap">
+    <div class="glass_frame padding roundCorner isFlex flexCol gap alignCenter">
+        <div class="control_ui isFlex padding spaceBetween flexRow gap flexWrap">
+            <select class="chooseMenu padding roundCorner" id="chooseMenu">
+                <optgroup>
+                    <option value="chapter1_wordMeaning">Chapter1: Word Meaning</option>
+                    <option value="chapter1_wordMeaning">Comming</option>
+                    <option value="chapter1_wordMeaning">Soon</option>
+                </optgroup>
+                <input type="button" value="Play" onclick="play()" class="noStyle playButton padding roundCorner isFlex centerElement">
+            </select>
+        </div>
+        <div class="problem_statement padding">Multiple choice Questions</div>
+        <div class="problems isFlex flexCol gap" id="problems">
+            <div class="problem multiple_choice padding roundCorner isFlex flexCol gap">
+                <div class="question">What is the meaning of life?</div>
+                <div class="choosable_answers autoGrid gap">
+                    <div class="answer padding roundCorner isFlex centerElement">
+                        <label for="qs1_0">Death</label>
+                        <input type="radio" name="qs1" id="qs1_0" value="Death">
+                    </div>
+                    <div class="answer padding roundCorner isFlex centerElement">
+                        <label for="qs1_1">Birth</label>
+                        <input type="radio" name="qs1" id="qs1_1" value="Birth">
+                    </div>
+                    <div class="answer padding roundCorner isFlex centerElement">
+                        <label for="qs1_2">Progress</label>
+                        <input type="radio" name="qs1" id="qs1_2" value="Progress">
+                    </div>
+                    <div class="answer padding roundCorner isFlex centerElement">
+                        <label for="qs1_3">Food</label>
+                        <input type="radio" name="qs1" id="qs1_3" value="Food">
+                    </div>
+                    <div class="answer hidden">
+                        <input type="radio" name="qs1" value="null" checked>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls autoGrid gap">
+            <input type="button" value="Check" onclick="checkError()" class="noStyle checkButton padding roundCorner isFlex centerElement">
+            <input type="button" value="Reset" onclick="clearCheck()" class="noStyle resetButton padding roundCorner isFlex centerElement">
+            <input type="button" value="Show Answers"  onclick="showAnswer()" class="noStyle nextButton padding roundCorner isFlex centerElement">
+            <p id="score">0/10</p>
+        </div>
+    </div>
+    <div class="credit">
+        (c) 아르드 내러스 (Ard Nerus)
+    </div>
+</body>
+<script src="./questionProcessor.js"></script>
+<script src="./execute.js"></script>
+<script src="./form_control.js"></script>
+</html>
